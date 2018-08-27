@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+	window.ondragstart = function() { 
+		document.getElementById("text").innerHTML = "Doesn't work :)";
+		return false; 
+	} 
+</script>
+</head>
+<body>
+	<p id="text">Drag me...</p>
+	<img src="img/sample.jpg" width="50%" height="50%">
+</body>
+</html>

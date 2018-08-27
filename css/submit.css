@@ -1,0 +1,62 @@
+.submit-form-card {
+	width: 60% !important;
+	height: 640px !important;
+	margin-left: 15% !important;
+}
+
+.submit-form-card form {
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 60px;
+}
+
+.submit-form-card * {
+	position: relative;
+}
+
+.submit-form-card form label {
+	margin: 4px;
+	text-align: center;
+	display: inline-block;
+	margin-top: 12px;
+}
+
+.submit-form-card form input , .submit-form-card form textarea  {
+	border: 1px solid #2196f3;
+	border-radius: 2px;
+	background-color: #fafafa;
+	transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+	width: 100%;
+}
+
+.submit-form-card form textarea  {
+	resize: none;
+	height: 240px;
+	overflow: auto;
+}
+
+
+.submit-form-card form p  {
+	font-size: 125%;
+	margin-top: -24px;
+	margin-bottom: 8px;
+}
+
+.submit-form-card form input:hover , .submit-form-card form textarea:hover  {
+	background-color: white;
+}
+
+
+.submit-form-card form input:focus , .submit-form-card form textarea:focus  {
+	outline: none;
+}
+
+.submit-form-card form input[type="submit"]  {
+	height: 24pt;
+	width: 60%;
+	margin: 0;
+	padding: 0;
+	margin-left: 20%;
+	margin-top: 16px;
+	font-size: 12pt;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+			/***************************
+			****************************
+				The first div isn't required,
+				the second div may be in the body,
+				this example results the same this as 
+				width: 50%; and height: auto; on an <img> tag.
+				Use this snippet to imitate the behaviour of
+				th <img> tag,
+				The aspect ratio here is 1:1;
+			****************************
+			***************************/
+			div.first{
+				width: 120px;
+				height: 160px;
+				resize: both;
+    			overflow: auto;
+    			background-color: #3F51B5;
+			}
+			div.second{
+				width: 50%;
+				height: auto;
+				padding-bottom: 25%;
+				background-color: #607D8B;
+			}
+		</style>
+	</head>
+	<body>
+		<p>Resize me</p>
+		<div class="first">
+			<div class="second"></div>
+		</div>
+	</body>
+</html>

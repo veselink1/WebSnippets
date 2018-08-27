@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+			/***************************
+			****************************
+				CSS filters usage.
+				Filters are not supported 
+				by all browsers at time of posting.
+				Browser-specific attributes may
+				be required.
+			****************************
+			***************************/
+			div#showcase {
+				font-size: 28pt;
+				color: blue;
+				transition: 0.2s ease-in-out;
+			}
+
+			div.blur {
+				-webkit-filter: blur(5px);
+				-moz-filter: blur(5px);
+				-ms-filter: blur(5px);
+				filter: blur(5px);
+			}
+
+			div.blur {
+				-webkit-filter: blur(5px);
+				-moz-filter: blur(5px);
+				-ms-filter: blur(5px);
+				filter: blur(5px);
+			}
+			div.brightness {
+				-webkit-filter: brightness(2);
+				-moz-filter: brightness(2);
+				-ms-filter: brightness(2);
+				filter: brightness(2);
+			}
+			div.contrast {
+				-webkit-filter: contrast(2);
+				-moz-filter: contrast(2);
+				-ms-filter: contrast(2);
+				filter: contrast(2);
+			}
+			div.drop-shadow {
+				-webkit-filter: drop-shadow(25px 25px 20px black);
+				-moz-filter: drop-shadow(25px 25px 20px black);
+				-ms-filter: drop-shadow(25px 25px 20px black);
+				filter: drop-shadow(25px 25px 20px black);
+			}
+			div.grayscale {
+				-webkit-filter: grayscale(0.5);
+				-moz-filter: grayscale(0.5);
+				-ms-filter: grayscale(0.5);
+				filter: grayscale(0.5);
+			}
+			div.hue-rotate {
+				-webkit-filter: hue-rotate(60deg);
+				-moz-filter: hue-rotate(60deg);
+				-ms-filter: hue-rotate(60deg);
+				filter: hue-rotate(60deg);
+			}
+			div.invert {
+				-webkit-filter: invert(1);
+				-moz-filter: invert(1);
+				-ms-filter: invert(1);
+				filter: invert(1);
+			}
+			div.saturate {
+				-webkit-filter: saturate(2.2);
+				-moz-filter: saturate(2.2);
+				-ms-filter: saturate(2.2);
+				filter: saturate(2.2);
+			}
+			div.sepia {
+				-webkit-filter: sepia(0.2);
+				-moz-filter: sepia(0.2);
+				-ms-filter: sepia(0.2);
+				filter: sepia(0.2);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="showcase">
+			This is some sample text<br>
+			<img src="img.jpg" height="192px" width="192px">
+		</div>
+		
+
+		Blur<input type="radio" name="filters" value="blur" onclick="showcase(this.value)">|
+		Brightness<input type="radio" name="filters" value="brightness" onclick="showcase(this.value)">|
+		Contrast<input type="radio" name="filters" value="contrast" onclick="showcase(this.value)">|
+		Drop Shadow<input type="radio" name="filters" value="drop-shadow" onclick="showcase(this.value)">|
+		Grayscale<input type="radio" name="filters" value="grayscale" onclick="showcase(this.value)">|
+		Hue Rotate<input type="radio" name="filters" value="hue-rotate" onclick="showcase(this.value)">|
+		Invert<input type="radio" name="filters" value="invert" onclick="showcase(this.value)">|
+		Saturate<input type="radio" name="filters" value="saturate" onclick="showcase(this.value)">|
+		Sepia<input type="radio" name="filters" value="sepia" onclick="showcase(this.value)">|
+
+
+		<script type="text/javascript">
+		function showcase(className)
+		{
+			document.getElementById("showcase").className = className;
+		}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+var para;
+document.oncontextmenu = function() {
+			block();
+            window.event.returnValue = false;
+    		}
+document.onkeydown = function(e) {
+            if (e.keyCode == 123 || e.keyCode == 17 || e.keyCode == 18) {
+                block();
+                return false;
+            }
+        }
+function block(){
+para=document.getElementById("text");
+            para.innerHTML = "Blocked"
+            setTimeout(function(){
+            	para.innerHTML = "Try to access Developer tools"}, 500);
+}
+</script>
+</head>
+<body>
+	<p id="text">Try to access Developer tools</p>
+</body>
+</html>

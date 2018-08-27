@@ -1,0 +1,129 @@
+nav.menuWrapper {
+	height: 46px;
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 8px;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	border-radius: 2px;
+	border-bottom: 2px solid rgba(0,0,0,0.13);
+	transition: 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+	z-index: 16;
+}
+
+nav.menuWrapper ul {
+	list-style-type: none;
+	margin: 0 auto;
+	display: block;
+	height: 100%;
+	width: 572px;
+}
+
+nav.menuWrapper ul li {
+	float: left;
+	width: auto;
+	height: 100%;
+	margin-top: 8px;
+	margin-right: 18px;
+}
+
+nav.menuWrapper ul li a, nav.menuWrapper ul li a:link {
+	color: white;
+	text-decoration: none;
+}
+
+nav.menuWrapper ul li a {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 300;
+	font-size: 22px;
+	transition: text-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+nav.menuWrapper ul li a:hover {
+	text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+nav.menuWrapper ul li input#searchBox {
+	height: 24px;
+	width: 100px;
+	background-color: white;
+	font-family: "Source Code Pro";
+	border-radius: 24px;
+	border: none;
+	margin-left: 30px;
+	margin-top: 3px;
+	padding-left: 10px;
+	background-color: #EEEEEE;
+	transition: 0.2s;
+}
+
+nav.menuWrapper ul li input#searchBox:hover {
+	text-shadow: none;
+	background-color: #F5F5F5;
+}
+
+nav.menuWrapper ul li input#searchBox:focus {
+	outline: none;
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+nav div#searchResult {
+	opacity: 0;
+	height: auto;
+	max-height: 240px;
+	overflow-y: auto;
+	overflow-x: hidden;  
+	width: auto;
+	background-color: white;
+	border-radius: 2px;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+	z-index: -1;
+	position: relative;
+	float: right;
+	top: -36px;
+	right: -60px;
+	transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+	padding-top: 5px;
+}
+
+nav div#searchResult a {
+	color: gray;
+	font-family: "Source Code Pro";
+	display: inline-block;
+	width: 190px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	text-shadow: none;
+	font-size: 18px;
+	padding: 5px;
+	transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+	text-decoration: none;
+}
+
+nav div#searchResult a:hover {
+	background-color: #ECEFF1;
+}
+
+nav div#searchResult div {
+	height: 1px;
+	width: 100%;
+	margin-bottom: 5px;
+	background-color: #E0E0E0;
+}
+
+nav div#searchResult.visible {
+	opacity: 1;
+	top: 16px;
+	z-index: 16;
+}
+
+nav ul div#expand {display: none;}
+
+nav ul li.Search {width: 140px; margin-left: -36px;}
+
+@media (max-width: 1325px) {
+		nav.menuWrapper {
+		width: 90%;
+	}
+}

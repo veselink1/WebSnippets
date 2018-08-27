@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+
+/* Search the DOM
+by class, tag, id or attribute
+
+The syntax is:
+            $(tagName) - Returns an array
+            $(.className) - Returns an array
+            $(#id) - Returns an element
+            $([attribute]) - Returns an array
+
+For example: 
+
+<p attribP>Attribute</p>
+
+$([attribP]) == <p attribP>Attribute</p>
+
+
+ */
+
+
+function $(e){ // $ can be anything Example: Find, etc.
+    switch(e.charAt(0)){
+        case "#": 
+            return document.getElementById(e.substr(1));
+            break;
+        case ".": 
+            return document.getElementsByClassName(e.substr(1));
+            break;
+        case "[":
+            return document.querySelectorAll(e);
+            break;
+        default: 
+            return document.getElementsByTagName(e);
+    }
+}
+
+
+//Search
+function PrintAlert(e, searchTerm)
+{
+    if (e.keyCode==13)
+    {
+        if ($(searchTerm).length) {
+            alert("Found " + ($(searchTerm)[0].innerHTML));
+        }else{
+            alert("Found " + ($(searchTerm).innerHTML));
+        }
+    }
+}
+
+</script>
+</head>
+<body>
+    Press enter to search
+	<input type="text" id="query" onkeypress="PrintAlert(event,this.value)" placeholder="tag, .class, #id, [attrib]">
+    <p>Tag</p>
+    <p id="idP">ID</p>
+    <p class="classP">Class</p>
+    <p attribP>Attribute</p>
+</body>
+</html>

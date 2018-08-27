@@ -1,0 +1,148 @@
+nav.menuWrapper {
+	overflow: hidden;
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	left: 2%;
+	top: 2px;
+	transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+img.logo{
+	position: absolute;
+	left: 40%;
+	top: 6px;
+	height: 64px;
+}
+
+div.pages {
+	top: 70px;
+}
+
+section.grid div.card {
+	margin: 1.5%;
+}
+
+section.grid {
+	height: 664px;
+	margin-top: 62px;
+}
+
+section.grid.first {
+	top: 8px;
+}
+
+section article.card div.cln60{
+		height: 90%;
+		width: 90%;
+		margin: 5%;
+		position: absolute;
+		z-index: -1;
+}
+
+section article.card div.cln40{
+	width: 35%;
+	height: 233px;
+	background-color: rgba(255,255,255,0.8);
+}
+
+
+nav.menuWrapper ul li div#searchResult {
+	height: 80px;
+	overflow: auto;
+}
+
+nav.menuWrapper ul li input#searchBox {
+	width: 150px;
+}
+
+nav.menuWrapper.visible {
+	width: 180px;
+	height: 360px;
+}
+
+nav.menuWrapper.visible ul li {
+	height: 36px;
+	margin-left: 10px;
+}
+
+nav.menuWrapper.visible ul div#searchResult {
+	width: 95%;
+	left: 2.5%;
+}
+
+nav.menuWrapper ul div#searchResult a{
+	width: 123px;
+}
+
+nav.menuWrapper.visible ul input#searchBox{
+	margin-left: 0;
+}
+
+nav.menuWrapper.visible ul li.Home {
+	margin-top: 0;
+}
+
+nav.menuWrapper ul {
+	padding: 0;
+}
+
+nav.menuWrapper ul li {
+	clear: both;
+	float: none;
+	transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+nav.menuWrapper ul li.Home {
+	margin-top: 180px;
+}
+
+nav.menuWrapper ul div#expand {
+	display: block;
+	position: relative;
+	height: 50px;
+	width: 50px;
+	background-image: url("../img/menu.png");
+	background-size: 50px 50px;
+	transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+@media (max-width: 929px) {
+	section.grid {
+		height: 1364px;
+	}
+	article.card {
+		width: 90%;
+		margin: 25px 5%;
+		transition: 0.2s;
+	}
+}
+
+@media (max-width: 660px) {
+   nav div#searchResult {
+   	max-height: 100px;
+   }
+   section.grid, section.grid.first {
+		left: 2%;
+		width: 96%;
+   }
+  section.grid div.card div.cln60 {
+  	border: none;
+  	height: 160px;
+  	width: 90%;
+  }
+  section.grid div.card div.cln40 {
+  	width: 90%;
+  	height: 160px;
+  }
+  section.grid div.card {
+  	height: auto;
+  	width: 96%;
+  	margin-bottom: 10%;
+  }
+  div.pages {
+  	left: 2%;
+  }
+}

@@ -1,0 +1,74 @@
+<style type="text/css">
+	article.welcome {
+		width: 95%;
+		border-color: #2196F3;
+	}
+
+	article.welcome span.cardTitle {
+		background-color: #2196F3;
+		color: white;
+	}
+
+	article.welcome div {
+		padding: 32px;
+		font-size: 18pt;
+		font-family: "Source Code Pro";
+		overflow:hidden;
+	}
+
+	article.welcome div ul {
+		list-style-type: none;
+	}
+
+	article.welcome div ul>li::before {
+		content: " - ";
+	}
+
+	@media (max-width: 960px) {
+		article.welcome div {
+			font-size: 1em;
+			padding: 24px;
+			}
+
+		article.welcome
+		{
+			width: 90%;
+			border-color: #2196F3;
+		}
+	}
+	@media (max-width: 412px) {
+		article.welcome div {
+			font-size: 0.8em;
+			padding: 12px;
+			}
+
+		article.welcome
+		{
+			width: 90%;
+			border-color: #2196F3;
+		}
+	}
+</style>
+<article class="card welcome">
+	<span class="cardTitle">Welcome</span>
+	<div>
+	<p> web@dev:-$ Web Snippets 
+		<ul>
+			<li>copy</li>
+			<li>paste</li>
+			<li>modify</li>
+			<li>create</li>
+		</ul>
+	</p>
+	</div>
+</article>
+<article class="card">
+	<span class="cardTitle">Disable F12 developer tools</span>
+	<div class="cln40">Prevents the user from accessing Developer tools, by blocking the context menu, Ctrl and F12 buttons.</div>
+	<div class="cln60 centerBg containBg" style="background-image: url('snippets/JavaScript/noF12/preview.jpg')"></div>
+</article>
+<article class="card">
+	<span class="cardTitle">Keep div aspect ratio on resize</span>
+	<div class="cln40">Keep the preset aspect ratio of a &lt;div&gt; even after browser window resize.</div>
+	<div class="cln60 centerBg containBg" style="background-image: url('snippets/HTMLandCSS/keepAspect/preview.jpg')"></div>
+</article>

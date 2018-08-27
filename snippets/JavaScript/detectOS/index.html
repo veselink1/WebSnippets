@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<p id="text">You are using </p>
+	<!-- Script -->
+	<script type="text/javascript">
+	/*Use this script to
+	detect Windows, Mac, Linux, Android, iOS, Windows Phone*/
+	var OS = navigator.userAgent;
+	OS = OS.substr(OS.indexOf("\(")+1, OS.length);
+	OS = OS.substr(0, OS.indexOf("\;"));
+	if (OS.indexOf("Windows Phone") > -1) {
+		OS="Windows Phone";
+	} else{
+		if (OS.indexOf("MacIntel") > -1) {
+			OS="OS X";
+		} else{
+			if (OS.indexOf("Android") > -1) {
+				OS = "Android";
+			} else{
+				if ((OS.indexOf("Linux") > -1)) {
+					OS = "Linux";
+				} else{
+					if ((OS.indexOf("iOS") > -1 || (OS.indexOf("iPhone") > -1) || (OS.indexOf("iPad") > -1) || (OS.indexOf("iPod") > -1))) {
+						OS = "iOS";
+					} else{
+						if ((OS.indexOf("Windows") > -1)) {
+							OS = "Windows";
+						} else{
+							if ((OS.indexOf("BlackBerry") > -1)) {
+								OS = "BlackBerry";
+							}else{
+								if ((OS.indexOf("Solaris") > -1)) {
+									OS = "Solaris";
+								} else{
+									OS = "undefined";
+								};
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+
+	//Write OS to a paragraph
+	document.getElementById("text").innerHTML += OS;
+
+	/*Minified version thanks to jscompress.com
+	var OS=navigator.userAgent;OS=OS.substr(OS.indexOf("(")+1,OS.length),OS=OS.substr(0,OS.indexOf(";")),OS=OS.indexOf("Windows Phone")>-1?"Windows Phone":OS.indexOf("MacIntel")>-1?"OS X":OS.indexOf("Android")>-1?"Android":OS.indexOf("Linux")>-1?"Linux":OS.indexOf("iOS")>-1||OS.indexOf("iPhone")>-1||OS.indexOf("iPad")>-1||OS.indexOf("iPod")>-1?"iOS":OS.indexOf("Windows")>-1?"Windows":OS.indexOf("BlackBerry")>-1?"BlackBerry":OS.indexOf("Solaris")>-1?"Solaris":"undefined";
+	*/
+	
+	/*More appropriate would be to use this template
+	switch(OS)
+	{
+		case "Windows" : //Windows specific code goes here;
+		case "Android" : //Android specific code goes here;
+		//etc. 
+	}
+	*/
+	</script>
+</body>
+</html>

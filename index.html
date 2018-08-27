@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="A website full of commonly used HTML, CSS and JavaScript Snippets.">
+	<meta name="keywords" content="HTML,CSS,JavaScript,Snippets">
+	<meta name="author" content="Veselin Karaganev">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="google-site-verification" content="Y_zM8Y69GqVfYeAp9APShsZj1s6huXWR6D7-ApwJwaw" />
+	<title>Web Snippets</title>
+	<link rel="icon" type="image/png" href="/favicon.png">
+	<link rel="shortcut icon" type="image/png" href="/favicon.png">
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/menu.css">
+	<link rel="stylesheet" type="text/css" href="css/card.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" media="screen and (max-width: 966px)" type="text/css" href="css/mobile.css">
+	<script type="text/javascript" src="js/pages.js"></script>
+</head>
+<body onload="fetchGrid(0)">
+	<nav class="menuWrapper blue">
+	<ul>
+		<div id="expand"></div>
+		<li class="Home"><a href="/">Home</a></li>
+		<li class="HTMLandCSS"><a href="snippets/HTMLandCSS">HTML+CSS</a></li>
+		<li class="JS"><a href="snippets/JavaScript">JavaScript</a></li>
+		<li class="Submit"><a href="submit">Submit</a></li>
+		<li class="Search"><input type="text" placeholder="Search" id="searchBox" contenteditable="true"></input><div id="searchResult"></div></li>
+	</ul>
+	</nav>
+	<img src="img/logo.png" class="logo">
+	<script type="text/javascript" src="js/search.js"></script>
+	<main>
+	<div class="pages">
+				<a onclick="switchToPage(1)">1</a>
+				<a onclick="switchToPage(2)">2</a>
+				<a onclick="switchToPage(3)">3</a>
+	</div>
+	<section class="grid first" data-content-url="grids/grid1.html"></section>
+	<section class="grid second" data-content-url="grids/grid2.html"></section>
+	<section class="grid second" data-content-url="grids/grid3.html"></section>
+	</main>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

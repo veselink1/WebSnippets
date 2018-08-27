@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<span class="email">Contact me at my!dot!name!at!gmail!dot!com</span>
+
+    <script type="text/javascript">
+    /*Email decryptor
+    -Use !dot! instead of .
+    -Use !at! instead of @
+    END*/
+    var emails = document.getElementsByClassName("email");
+    for (var i = 0; i < emails.length; i++) {
+        emails[i].innerHTML = emails[i].innerHTML.replace("!dot!", ".").replace("!at!", "@").replace("!dot!", ".");
+    };
+    </script>
+</body>
+</html>
